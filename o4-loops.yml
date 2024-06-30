@@ -15,3 +15,9 @@
       loop:
         - {trainer: "sai", course: "AWS"}
         - {trainer: "vikram", course: "Devops"}
+    - name: execute shell command
+      ansible.builtin.shell: up
+      register: out
+    - name: debug
+      ansible.builtin.debug:
+        msg: {{out}}
