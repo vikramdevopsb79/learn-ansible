@@ -29,7 +29,7 @@
             - fig
     - name: Map variable printing
       ansible.builtin.debug:
-        msg: course Name is - {{list1["name"]}}, Trainer Name is - {{list1["trainer}}
+        msg: course Name is - {{list1["name"]}}, Trainer Name is - {{list1["trainer"]}}
       vars:
           list1:
            name: Devops
