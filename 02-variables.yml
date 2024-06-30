@@ -7,19 +7,21 @@
   tasks:
     - name: above var printing
       ansible.builtin.debug:
-        msg: {{url}}
+        msg: "{{url}}"
     - name: below var printing
       ansible.builtin.debug:
-        msg: {{uri}}
+        msg: "{{uri}}"
+      vars:
+        uri: google
     - name: From other file printing
       ansible.builtin.debug:
-        msg: {{PROJECT}}
+        msg: "{{PROJECT}}"
     - name: From cli printing
       ansible.builtin.debug:
-        msg: {{Course}}
+        msg: "{{Course}}"
     - name: List printing
       ansible.builtin.debug:
-        msg: {{list1}}, {{list1[0]}}, {{list1[1]}}
+        msg: "{{list1}}", "{{list1[0]}}", "{{list1[1]}}"
         vars:
           list1:
             - apple
