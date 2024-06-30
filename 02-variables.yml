@@ -3,7 +3,7 @@
   vars:
     url: google.com
   var_files:
-    - var.yml
+    - vars.yml
   tasks:
     - name: above var printing
       ansible.builtin.debug:
