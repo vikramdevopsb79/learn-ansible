@@ -2,7 +2,7 @@
   hosts: all
   vars:
     url: google.com
-  var_files:
+  vars_files:
     - vars.yml
   tasks:
     - name: above var printing
