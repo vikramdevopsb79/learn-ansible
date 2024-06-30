@@ -22,7 +22,7 @@
     - name: List printing
       ansible.builtin.debug:
         msg: First element is list1 - {{ list1[0] }}, Second element is list1 - {{ list1[1] }}
-        vars:
+      vars:
           list1:
             - apple
             - banana
@@ -30,7 +30,7 @@
     - name: Map variable printing
       ansible.builtin.debug:
         msg: course Name is - {{list1["name"]}}, Trainer Name is - {{list1["trainer}}
-        vars:
+      vars:
           list1:
            name: Devops
            trainer: john
