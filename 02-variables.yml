@@ -21,7 +21,7 @@
         msg: "{{Course}}"
     - name: List printing
       ansible.builtin.debug:
-        msg: "{{list1}}", "{{list1[0]}}", "{{list1[1]}}"
+        msg: "{{list1}}"
         vars:
           list1:
             - apple
