@@ -1,0 +1,11 @@
+- name: conditions
+  hosts: localhost
+  tasks:
+    - name: Devops course
+      ansible.builtin.debug:
+       msg: welcome to devops course
+      when: course_name == "Devops"
+    - name: AWS course
+      ansible.builtin.debug:
+        msg: welcome to AWS course
+      when: course_name == "AWS"
