@@ -1,0 +1,38 @@
+- name: variable Playbook
+  hosts: all
+  vars:
+    url: google.com
+  var_files:
+    - var.yml
+  tasks:
+    - name: above var printing
+      ansible.builtin.debug:
+        msg: {{url}}
+    - name: below var printing
+      ansible.builtin.debug:
+        msg: {{uri}}
+    - name: From other file printing
+      ansible.builtin.debug:
+        msg: {{PROJECT}}
+    - name: From cli printing
+      ansible.builtin.debug:
+        msg: {{Course}}
+    - name: List printing
+      ansible.builtin.debug:
+        msg: {{list1}}, {{list1[0]}}, {{list1[1]}}
+        vars:
+          list1:
+            - apple
+            - banana
+            - fig
+    - name: Map variable printing
+      ansible.builtin.debug:
+        msg: course Name is - {{list1["name"]}}, Trainer Name is - {{list1["trainer}}
+        vars:
+          list1:
+           name: Devops
+           trainer: john
+
+
+
+
