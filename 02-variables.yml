@@ -21,7 +21,7 @@
         msg: "{{Course}}"
     - name: List printing
       ansible.builtin.debug:
-        msg: "{{list1}}"
+        msg: First element is list1 - {{ list1[0] }}, Second element is list1 - {{ list1[1] }}
         vars:
           list1:
             - apple
